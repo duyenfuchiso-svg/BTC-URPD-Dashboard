@@ -1,0 +1,16 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/lsr"
+  to = "/.netlify/functions/lsr-data"
+  status = 200
+
+[[redirects]]
+  from = "/api/refresh-lsr"
+  to = "/.netlify/functions/refresh-lsr-now"
+  status = 200
